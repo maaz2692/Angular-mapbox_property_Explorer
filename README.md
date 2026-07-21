@@ -30,6 +30,36 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 * Angular Router
 * JSON-based data sources
 
+## Project Structure
+
+```text
+src/
+├── app/
+│   ├── components/        # Reusable user-interface components
+│   ├── pages/             # Application pages and route-level views
+│   ├── services/          # Data loading and application services
+│   ├── models/            # TypeScript interfaces and data models
+│   └── app.routes.ts      # Application routing configuration
+├── assets/
+│   ├── data/              # JSON-based property and project data
+│   ├── images/            # Property and interface images
+│   └── markers/           # Custom SVG map markers
+├── environments/
+│   └── environment.example.ts
+├── styles.css             # Global application styles
+└── main.ts                # Application entry point
+```
+
+## Application Flow
+
+1. The application loads structured property data from JSON sources.
+2. Angular services provide the data to reusable components and project pages.
+3. Property locations are displayed on a Mapbox-powered interactive map.
+4. Custom SVG markers identify individual projects.
+5. Angular Router handles navigation between the map, project listings, and detail pages.
+6. Environment configuration supplies the Mapbox access token without exposing it in the repository.
+
+
 ## Clone the Repository
 
 ```bash
