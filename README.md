@@ -1,38 +1,59 @@
-Mapbox Project Navigator
+# Mapbox Project Navigator
 
-Author: Maaz Mustafa
+**Author:** Maaz Mustafa Khurshed Qazi
+**Version:** 1.0.0
 
-Version: B
+Mapbox Project Navigator is a modern, interactive real-estate web application built with **Angular**, **TypeScript**, and **Mapbox GL JS**.
 
-Mapbox Project Navigator is a modern, interactive web application built to display real-estate project details using Mapbox GL JS.
-This project provides a seamless experience for users to explore properties, view high-quality images, navigate between project pages, and interact with an embedded dynamic map powered by Mapbox.
+The application allows users to explore property projects, view high-quality images, navigate between project-detail pages, and interact with a dynamic Mapbox-powered map.
 
-The system fetches real project data from JSON sources and displays information such as:
+The application loads structured project data from JSON sources and presents information such as:
 
-Project images
+* Project images
+* Location coordinates
+* City, province, and project metadata
+* Detailed project information
+* Interactive map locations
+* Custom SVG map markers
 
-Location coordinates
-
-City, province, and project metadata
-
-Detailed project pages
-
-SVG-based custom map markers
-
-Using Angular’s modular structure, the application ensures fast loading, smooth routing, clean UI, and maintainable code architecture.
+Angular’s modular architecture supports reusable components, smooth routing, maintainable code, and a responsive user experience.
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.5.
 
-## Clone the repository
+## Technology Stack
+
+* Angular
+* TypeScript
+* Mapbox GL JS
+* HTML5
+* CSS
+* Angular Router
+* JSON-based data sources
+
+## Clone the Repository
+
 ```bash
 git clone https://github.com/maaz2692/mapbox.git
-cd your-project
+cd mapbox
 ```
-## Create environment.ts and add your Mapbox API key
-Before running the project, create this file:
 
-src/environments/environment.ts
+## Install Dependencies
+
 ```bash
+npm install
+```
+
+## Configure the Mapbox Access Token
+
+Before running the application, create the following file:
+
+```text
+src/environments/environment.ts
+```
+
+Add your Mapbox access token:
+
+```typescript
 export const environment = {
   production: false,
   mapbox: {
@@ -40,9 +61,16 @@ export const environment = {
   }
 };
 ```
-And for production build:
+
+For the production build, create:
+
+```text
 src/environments/environment.prod.ts
-```bash
+```
+
+Add the production configuration:
+
+```typescript
 export const environment = {
   production: true,
   mapbox: {
@@ -51,65 +79,100 @@ export const environment = {
 };
 ```
 
-You can get your key from:
-➡ https://account.mapbox.com/
+You can create a Mapbox access token through the [Mapbox account dashboard](https://account.mapbox.com/).
 
-## Development server
+> Do not commit a private or production access token to the repository.
 
-To start a local development server, run:
+## Development Server
 
-```bash
-npm install
-```
+Start the local development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Once the server is running, open:
 
-## Code scaffolding
+```text
+http://localhost:4200/
+```
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+The application will automatically reload whenever you modify the source files.
+
+## Code Scaffolding
+
+To generate a new Angular component, run:
 
 ```bash
 ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+For a complete list of available Angular schematics, run:
 
 ```bash
 ng generate --help
 ```
 
-## Building
+## Production Build
 
-To build the project run:
+Build the application by running:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The compiled application will be stored in the:
 
-## Running unit tests
+```text
+dist/
+```
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+directory.
+
+The production build applies Angular optimizations to improve application performance.
+
+## Running Unit Tests
+
+Run the configured unit tests with:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+## Project Highlights
 
-For end-to-end (e2e) testing, run:
+This project demonstrates:
 
-```bash
-ng e2e
-```
+* Development of reusable Angular and TypeScript components
+* Integration of interactive maps using Mapbox GL JS
+* Loading and presenting structured JSON data
+* Creation of custom SVG map markers
+* Implementation of project-detail pages
+* Client-side routing with Angular Router
+* Development of data-heavy and location-based interfaces
+* Environment-based configuration for development and production
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Future Improvements
+
+* Add advanced property filtering and search
+* Improve mobile responsiveness
+* Add loading and error states
+* Connect the application to a live REST API
+* Add automated end-to-end testing
+* Improve accessibility and keyboard navigation
+* Deploy a publicly accessible demonstration
 
 ## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+For more information about Angular CLI commands, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli).
+
+## Author
+
+**Maaz Mustafa Khurshed Qazi**
+
+* [LinkedIn](https://www.linkedin.com/in/qazi-maaz/)
+* [GitHub](https://github.com/maaz2692)
+
+## License
+
+This project is available for educational and portfolio purposes.
